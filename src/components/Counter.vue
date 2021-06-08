@@ -1,8 +1,9 @@
 <template>
   <div>
+    <h1>Counter</h1>
     <div>{{ countMessage }}</div>
-    <button @click="count++">クリック！</button>
-    <button @click="count = 0">リセット！</button>
+    <button @click="count++">Click!!</button>
+    <button @click="count = 0">Reset!!</button>
   </div>
 </template>
 
@@ -13,7 +14,7 @@ export default {
   name: "Counter",
   setup() {
     const count = ref(0);
-    const countMessage = computed(() => "回数: " + count.value);
+    const countMessage = computed(() => "Count: " + count.value);
     return { count, countMessage };
   },
 };

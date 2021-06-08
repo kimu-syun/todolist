@@ -1,23 +1,24 @@
 <template>
   <div>
-    <div>ItemList</div>
-    <div v-for="item in items" :key="item.name">
-      <div class="item" :class="{ over500: item.price >= 500}">
-        <div class="name">名前: {{ item.name }}</div>
-        <div class="price">{{ item.price }} 円</div>
-        <div v-if="item.price >= 10000">高額商品</div>
-      </div>
-    </div>
+    <h1>ItemList</h1>
     <div>
       <label>
-        名前
+        Item
         <input v-model="newItemName" type="text" />
       </label>
       <label>
-        価格
+        Place
         <input v-model="newItemPrice" type="number" />
       </label>
       <button @click="addItem">add</button>
+    </div>
+    <div v-for="item in items" :key="item.name">
+      <div class="item" :class="{ over500: item.price >= 500}">
+        <div>
+          Item: {{ item.name }}  {{ item.price }} 円
+        </div>
+        <div v-if="item.price >= 10000">高額商品</div>
+      </div>
     </div>
   </div>
 </template>

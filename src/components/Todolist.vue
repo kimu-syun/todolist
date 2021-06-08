@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>TodoList</div>
+    <h1>TodoList</h1>
     <div>
       <label>
         Task

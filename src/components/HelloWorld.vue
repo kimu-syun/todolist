@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <counter />
-    <item-list/>
-    <todolist/>
+    <dev class="cmp">
+      <counter />
+      <item-list/>
+      <todolist/>
+    </dev>
   </div>
 </template>
 
@@ -30,5 +32,9 @@ export default {
 <style scoped>
 a {
   color: #42b983;
+}
+.cmp{
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>
